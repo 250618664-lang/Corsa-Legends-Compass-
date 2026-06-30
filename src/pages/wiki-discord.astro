@@ -1,0 +1,161 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+
+<Base title="Wiki & Discord Status" description="Corsa Legends community wiki and Discord status — what's confirmed, what exists as a lead, and what cannot be verified.">
+  <div class="hero-grid">
+    <div>
+      <div class="panel hero">
+        <span class="eyebrow"><span class="dot warn"></span> Wiki &amp; Discord Status</span>
+        <h1>Wiki &amp; Discord<br/>Source Checker</h1>
+        <p class="lead">See which community resources are confirmed, which exist as leads, and which cannot be verified from public API.</p>
+      </div>
+
+      <div class="panel section" style="margin-top: 16px;">
+        <div class="answer-strip" style="margin: 0;">
+          <div>
+            <strong>Official Discord: not confirmed from public API</strong>
+            <span>The Roblox social-links check did not return a public official link. No official Discord link should be published.</span>
+          </div>
+        </div>
+
+        <h2 style="margin: 20px 0 10px; font-size: 16px;">Discord status</h2>
+
+        <div class="check-list">
+          <div class="check-item hold">
+            <div class="check-num">?</div>
+            <div class="check-text">
+              <strong>Official Discord link</strong>
+              <p>The Roblox social-links check was not publicly accessible. No official Discord can be confirmed from public Roblox data.</p>
+            </div>
+            <span class="check-badge warn">Not confirmed</span>
+          </div>
+          <div class="check-item">
+            <div class="check-num">!</div>
+            <div class="check-text">
+              <strong>Community Discord servers</strong>
+              <p>Search results may show community-run Discord servers. These are not official — verify before joining any link.</p>
+            </div>
+            <span class="check-badge">Community lead</span>
+          </div>
+        </div>
+
+        <h2 style="margin: 24px 0 10px; font-size: 16px;">Wiki / Community status</h2>
+
+        <div class="check-list">
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Fandom wiki exists</strong>
+              <p>A community-run Fandom wiki exists for Corsa Legends. Fandom wikis are not official — content is fan-created and unverified.</p>
+            </div>
+            <span class="check-badge">Community lead</span>
+          </div>
+          <div class="check-item hold">
+            <div class="check-num">?</div>
+            <div class="check-text">
+              <strong>Official wiki / Trello</strong>
+              <p>No official wiki or Trello board confirmed from Roblox API or official announcements.</p>
+            </div>
+            <span class="check-badge warn">Not confirmed</span>
+          </div>
+          <div class="check-item">
+            <div class="check-num">!</div>
+            <div class="check-text">
+              <strong>YouTube guides</strong>
+              <p>YouTube has community videos about tuning, codes, and gameplay. These are community-created — not official.</p>
+            </div>
+            <span class="check-badge">Community lead</span>
+          </div>
+          <div class="check-item">
+            <div class="check-num">!</div>
+            <div class="check-text">
+              <strong>Third-party code sites</strong>
+              <p>Pro Game Guides, Game Rant, and similar sites have code lists. These are community-compiled — no code is confirmed unless in the official Roblox description.</p>
+            </div>
+            <span class="check-badge">Community lead</span>
+          </div>
+        </div>
+
+        <h2 style="margin: 24px 0 10px; font-size: 16px;">Resource safety guide</h2>
+        <div class="can-cannot">
+          <div class="can-card">
+            <h3>✓ Safe to use</h3>
+            <ul>
+              <li>Official Roblox game page description</li>
+              <li>Official Roblox API data</li>
+              <li>Code <strong>75K</strong> from official description</li>
+              <li>Verified tuning categories from official description</li>
+            </ul>
+          </div>
+          <div class="cannot-card">
+            <h3>✗ Verify before trusting</h3>
+            <ul>
+              <li>Any Discord link not from official Roblox API</li>
+              <li>Fandom wiki car/tune values</li>
+              <li>Third-party "all working codes" lists</li>
+              <li>YouTube tuning guides without in-game confirmation</li>
+              <li>"Best car" or "best engine" claims</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="panel side">
+        <h2>API check results</h2>
+        <div class="check-list">
+          <div class="check-item hold">
+            <div class="check-num">401</div>
+            <div class="check-text">
+              <strong>Social links check</strong>
+              <p>Did not return a public official link</p>
+            </div>
+            <span class="check-badge warn">No public result</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Roblox game page</strong>
+              <p>Accessible publicly</p>
+            </div>
+            <span class="check-badge good">OK</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Games API</strong>
+              <p>Returns game data</p>
+            </div>
+            <span class="check-badge good">OK</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Votes API</strong>
+              <p>Returns vote data</p>
+            </div>
+            <span class="check-badge good">OK</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel side" style="margin-top: 14px;">
+        <h2>What this means</h2>
+        <p style="font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 10px;">We check official Roblox data to confirm whether resources are officially supported.</p>
+        <p style="font-size: 12px; color: var(--muted); line-height: 1.5;">When Roblox does not show a public result, we note it as "not confirmed" rather than claiming it exists or does not exist.</p>
+        <p style="font-size: 12px; color: var(--quiet); margin-top: 8px;">Checked: {SITE.metricsDate}</p>
+      </div>
+
+      <div class="panel side" style="margin-top: 14px;">
+        <h2>Go to</h2>
+        <p><a href="/codes/" style="color: var(--accent);">→ Code Status</a></p>
+        <p><a href="/tune-helper/" style="color: var(--accent);">→ Tune Helper</a></p>
+        <p><a href="/updates/" style="color: var(--accent);">→ Update Tracker</a></p>
+        <p><a href="/sources/" style="color: var(--accent);">→ Source Trust Info</a></p>
+      </div>
+    </aside>
+  </div>
+</Base>

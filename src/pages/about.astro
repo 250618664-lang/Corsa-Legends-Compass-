@@ -1,0 +1,159 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+
+<Base title="About" description="About Corsa Legends Tune & Code Checker — unofficial Roblox helper, content boundaries, and correction contact.">
+  <div class="panel hero">
+    <span class="eyebrow"><span class="dot"></span> Unofficial Helper</span>
+    <h1>About This<br/>Helper</h1>
+    <p class="lead">A source-safe, player-focused helper for Corsa Legends on Roblox. Not affiliated with Roblox or {SITE.creator}.</p>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>What this site is</h2>
+    </div>
+    <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 16px;">
+      <strong style="color: var(--text);">{SITE.title}</strong> is an unofficial player helper built to answer common Corsa Legends questions using only publicly checked facts. It is designed to help players find confirmed information quickly without being misled by unverified tier lists, copied code lists, or community speculation presented as fact.
+    </p>
+    <p style="font-size: 14px; color: var(--muted); line-height: 1.7;">
+      Corsa Legends is a Roblox experience created by group <strong style="color: var(--text);">{SITE.creator}</strong>. This site does not speak for {SITE.creator} or Roblox Corporation.
+    </p>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Content boundaries</h2>
+      <p>These rules are followed on every page.</p>
+    </div>
+    <div class="can-cannot">
+      <div class="can-card">
+        <h3>✓ We publish</h3>
+        <ul>
+          <li>Official Roblox API facts (title, creator, description)</li>
+          <li>Official code status from Roblox game description</li>
+          <li>Confirmed tuning feature categories</li>
+          <li>Alpha status and update milestones from official title</li>
+          <li>API snapshot metrics with date stamps</li>
+          <li>Clear "not confirmed yet" labels for unverified tips</li>
+          <li>Links to official sources and community leads</li>
+        </ul>
+      </div>
+      <div class="cannot-card">
+        <h3>✗ We never publish</h3>
+        <ul>
+          <li>Best car / best engine / best tune rankings</li>
+          <li>Exact tuning values or Supra tune</li>
+          <li>Active codes copied from third-party sites</li>
+          <li>Car values or rarity tiers</li>
+          <li>Official Discord link (cannot be confirmed from API)</li>
+          <li>Race routes or money farm methods</li>
+          <li>Unlicensed images, screenshots, or video frames</li>
+          <li>AI-generated content presented as verified fact</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Why some things say "not confirmed"</h2>
+    </div>
+    <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 14px;">
+      When an official Roblox check cannot show the information, returns empty results, or gives no public response, we mark that tip as <strong style="color: var(--text);">not confirmed</strong> — not as non-existent.
+    </p>
+    <p style="font-size: 14px; color: var(--muted); line-height: 1.7;">
+      Something that cannot be confirmed today might become confirmed after a future API check. We re-check periodically and update this site when new official data becomes available. We do not fill gaps with community speculation.
+    </p>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Game status</h2>
+    </div>
+    <div class="status-grid">
+      <div class="status-card good">
+        <h3>Alpha</h3>
+        <p>Game is actively in development. Expect bugs, changes, and potential resets.</p>
+      </div>
+      <div class="status-card warn">
+        <h3>No Ads</h3>
+        <p>This helper has no advertisements. It is a free, source-verified reference.</p>
+      </div>
+      <div class="status-card warn">
+        <h3>No Analytics</h3>
+        <p>No tracking scripts, cookies, or analytics are installed on this site.</p>
+      </div>
+      <div class="status-card good">
+        <h3>Open Sources</h3>
+        <p>Every fact links back to its source. Sources are explained on the Sources page.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Corrections and contact</h2>
+    </div>
+    <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 14px;">
+      If you found incorrect information, an outdated fact, or believe something was published without sufficient source support, please reach out. We verify all corrections against official Roblox API data before updating.
+    </p>
+    <p style="font-size: 14px; color: var(--muted); line-height: 1.7;">
+      We do not have a public contact form yet. For corrections or takedown requests, please leave a note through the appropriate channel when this site is deployed.
+    </p>
+    <p style="font-size: 13px; color: var(--quiet); margin-top: 14px;">
+      Last updated: {SITE.metricsDate} · Game data verified against Roblox API
+    </p>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Quick links</h2>
+    </div>
+    <div class="link-list">
+      <a class="link-item" href="/">
+        <div class="link-icon">🏠</div>
+        <div>
+          <strong>Home — Task Hub</strong>
+          <p>Main entry point with all page links</p>
+        </div>
+      </a>
+      <a class="link-item" href="/codes/">
+        <div class="link-icon">🔓</div>
+        <div>
+          <strong>Codes Status</strong>
+          <p>Official code checker</p>
+        </div>
+      </a>
+      <a class="link-item" href="/tune-helper/">
+        <div class="link-icon">⚙️</div>
+        <div>
+          <strong>Tune Category Checklist</strong>
+          <p>What tuning categories are confirmed</p>
+        </div>
+      </a>
+      <a class="link-item" href="/updates/">
+        <div class="link-icon">📡</div>
+        <div>
+          <strong>Update Tracker</strong>
+          <p>Official title changes and milestones</p>
+        </div>
+      </a>
+      <a class="link-item" href="/wiki-discord/">
+        <div class="link-icon">🔗</div>
+        <div>
+          <strong>Wiki &amp; Discord Status</strong>
+          <p>Which community resources are confirmed</p>
+        </div>
+      </a>
+      <a class="link-item" href="/sources/">
+        <div class="link-icon">📋</div>
+        <div>
+          <strong>Source Trust Cards</strong>
+          <p>Full source explanation</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</Base>

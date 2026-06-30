@@ -1,0 +1,138 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+import { OFFICIAL_CODE, NEXT_CODE } from '../data/claims';
+---
+
+<Base title="Codes Status" description="Check Corsa Legends official code status from Roblox — what is confirmed, what is not, and when the next code might come.">
+  <div class="hero-grid">
+    <div>
+      <div class="panel hero">
+        <span class="eyebrow"><span class="dot"></span> Codes Status</span>
+        <h1>Official Code<br/>Checker</h1>
+        <p class="lead">Only publishes what the Roblox API description actually states. No copied third-party code lists.</p>
+      </div>
+
+      <div class="panel section" style="margin-top: 16px;">
+        <div class="section-head">
+          <div>
+            <h2>What we know from Roblox</h2>
+            <p>Source: Roblox API game description snapshot {SITE.metricsDate}</p>
+          </div>
+        </div>
+
+        <div class="answer-strip" style="margin: 0;">
+          <div>
+            <strong>One official code is confirmed: <span class="code-token" style="font-size:14px;padding:5px 9px;">{OFFICIAL_CODE.code}</span></strong>
+            <span>Listed directly in the official Roblox game description. Next code is tied to 90,000 likes goal.</span>
+          </div>
+          <span class="dot" style="flex-shrink:0;"></span>
+        </div>
+
+        <div class="code-table">
+          <div class="code-row">
+            <div class="code-info">
+              <strong>Code: <span class="code-token">{OFFICIAL_CODE.code}</span></strong>
+              <p>Confirmed from official Roblox game description. Paste in-game at the codes redeem screen.</p>
+            </div>
+            <button class="copy-btn" onclick={`navigator.clipboard.writeText('${OFFICIAL_CODE.code}')`}>
+              Copy
+            </button>
+          </div>
+          <div class="code-row">
+            <div class="code-info">
+              <strong>Next code goal: {NEXT_CODE.likes.toLocaleString()} likes</strong>
+              <p>Official description states a new code will be added when the game reaches {NEXT_CODE.likes.toLocaleString()} likes. No code is active yet beyond <strong>{OFFICIAL_CODE.code}</strong>.</p>
+            </div>
+            <span class="copy-btn" style="opacity:0.4; cursor:default;">Pending</span>
+          </div>
+        </div>
+
+        <div class="can-cannot">
+          <div class="can-card">
+            <h3>✓ Official status</h3>
+            <ul>
+              <li>Code <strong>{OFFICIAL_CODE.code}</strong> is listed in official Roblox description</li>
+              <li>New code will come at {NEXT_CODE.likes.toLocaleString()} likes</li>
+              <li>Redeem in-game via codes screen</li>
+            </ul>
+          </div>
+          <div class="cannot-card">
+            <h3>✗ Cannot confirm</h3>
+            <ul>
+              <li>Any active codes beyond official description</li>
+              <li>Third-party "all working codes" lists</li>
+              <li>Expiration dates for codes</li>
+              <li>Code rewards or reward values</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="panel side">
+        <h2>Quick facts</h2>
+        <div class="check-list">
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Official code <strong>{OFFICIAL_CODE.code}</strong></strong>
+              <p>From Roblox API description</p>
+            </div>
+            <span class="check-badge good">Safe</span>
+          </div>
+          <div class="check-item">
+            <div class="check-num">2</div>
+            <div class="check-text">
+              <strong>Next code at {NEXT_CODE.likes.toLocaleString()} likes</strong>
+              <p>Official description says so — no code active yet</p>
+            </div>
+            <span class="check-badge">Track</span>
+          </div>
+          <div class="check-item hold">
+            <div class="check-num">?</div>
+            <div class="check-text">
+              <strong>Other codes</strong>
+              <p>Not published unless officially confirmed</p>
+            </div>
+            <span class="check-badge warn">Hold</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel side" style="margin-top: 14px;">
+        <h2>How to redeem</h2>
+        <div class="check-list">
+          <div class="check-item">
+            <div class="check-num">1</div>
+            <div class="check-text">
+              <strong>Open Roblox</strong>
+              <p>Launch Corsa Legends in Roblox</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-num">2</div>
+            <div class="check-text">
+              <strong>Find codes screen</strong>
+              <p>Usually in settings or main menu</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-num">3</div>
+            <div class="check-text">
+              <strong>Paste <span class="code-token" style="font-size:11px;padding:3px 6px;">{OFFICIAL_CODE.code}</span></strong>
+              <p>Copy the code above and paste it</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel side" style="margin-top: 14px;">
+        <p style="font-size: 12px; color: var(--quiet);">Last checked: {SITE.metricsDate} · Source: Roblox API game description</p>
+        <p style="font-size: 12px; color: var(--quiet); margin-top: 6px;"><a href="/updates/" style="color: var(--accent);">→ Check for new updates</a></p>
+        <p style="font-size: 12px; color: var(--quiet);"><a href="/sources/" style="color: var(--accent);">→ How we verify codes</a></p>
+      </div>
+    </aside>
+  </div>
+</Base>

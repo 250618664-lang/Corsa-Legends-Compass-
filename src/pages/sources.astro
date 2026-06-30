@@ -1,0 +1,184 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+
+<Base title="Sources" description="Corsa Legends source trust info — what comes from official Roblox API, what is a community lead, and how we verify facts.">
+  <div class="panel hero">
+    <span class="eyebrow"><span class="dot"></span> Source Trust Info</span>
+    <h1>Source Trust Cards</h1>
+    <p class="lead">Explains where our information comes from and why some things are marked "not confirmed yet".</p>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <div>
+        <h2>How we classify sources</h2>
+        <p>Every fact on this site traces back to a source. These are the levels we use — in plain language.</p>
+      </div>
+    </div>
+
+    <div class="status-grid">
+      <div class="status-card good">
+        <h3>✓ Official API</h3>
+        <p>Data directly from Roblox's official public game and vote checks. Includes game title, description, creator, and vote counts.</p>
+      </div>
+      <div class="status-card warn">
+        <h3>~ Official Description</h3>
+        <p>Text from the official Roblox game page description. This is publicly visible but not separately verified as an official changelog.</p>
+      </div>
+      <div class="status-card">
+        <h3>! Community Lead</h3>
+        <p>A publicly visible resource (Fandom wiki, YouTube, Discord) that may contain useful information but is not verified by official sources.</p>
+      </div>
+      <div class="status-card bad">
+        <h3>✗ Not Confirmed</h3>
+        <p>Something search results suggest exists, but official Roblox checks did not publicly confirm it. Cannot be verified or denied.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Source cards for each page</h2>
+    </div>
+
+    <div class="source-card">
+      <h3>Home / Task Hub</h3>
+      <div class="source-row">
+        <strong>Game identity</strong>
+        <span>Roblox game data check — universe ID 6786784563</span>
+      </div>
+      <div class="source-row">
+        <strong>Creator</strong>
+        <span>Roblox API — verified group Cogito</span>
+      </div>
+      <div class="source-row">
+        <strong>Alpha status</strong>
+        <span>Roblox API title — "[2 CARS + NEW RACE] Corsa Legends [ALPHA]"</span>
+      </div>
+      <div class="source-row">
+        <strong>Metrics</strong>
+        <span>Roblox API — visits, favorites, playing, votes (snapshot {SITE.metricsDate})</span>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <h3>/codes/ — Codes Status</h3>
+      <div class="source-row">
+        <strong>Code 75K</strong>
+        <span>Official Roblox game description — listed directly as a code reward</span>
+      </div>
+      <div class="source-row">
+        <strong>Next code at 90K likes</strong>
+        <span>Official Roblox game description — stated as a future milestone</span>
+      </div>
+      <div class="source-row">
+        <strong>Other codes</strong>
+        <span>Not published — no official source confirms them</span>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <h3>/tune-helper/ — Tune Helper</h3>
+      <div class="source-row">
+        <strong>Tuning categories</strong>
+        <span>Official Roblox description — engine swaps, suspension, tires, advanced tuning, performance upgrades, paint/interior/rims/tint</span>
+      </div>
+      <div class="source-row">
+        <strong>Exact tune values</strong>
+        <span>Not confirmed — no official source provides specific numbers</span>
+      </div>
+      <div class="source-row">
+        <strong>Best car / best engine</strong>
+        <span>Not confirmed — no official ranking exists</span>
+      </div>
+      <div class="source-row">
+        <strong>Car count</strong>
+        <span>Official description — "over 80 cars and trims"</span>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <h3>/updates/ — Update Tracker</h3>
+      <div class="source-row">
+        <strong>2 cars + new race</strong>
+        <span>Official Roblox title — "[2 CARS + NEW RACE]"</span>
+      </div>
+      <div class="source-row">
+        <strong>Alpha status</strong>
+        <span>Official Roblox title — "[ALPHA]"</span>
+      </div>
+      <div class="source-row">
+        <strong>Specific car names</strong>
+        <span>Not confirmed — Roblox API does not provide a named inventory</span>
+      </div>
+      <div class="source-row">
+        <strong>Race routes</strong>
+        <span>Not confirmed — no official source provides route data</span>
+      </div>
+    </div>
+
+    <div class="source-card">
+      <h3>/wiki-discord/ — Wiki &amp; Discord Status</h3>
+      <div class="source-row">
+        <strong>Fandom wiki</strong>
+        <span>Community Lead — publicly findable, not officially affiliated</span>
+      </div>
+      <div class="source-row">
+        <strong>Official Discord</strong>
+        <span>Not confirmed — Roblox social-links API returned 401 unauthorized</span>
+      </div>
+      <div class="source-row">
+        <strong>Roblox game page</strong>
+        <span>Official API — https://www.roblox.com/games/122720857080780/</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Official Roblox checks we ran</h2>
+    </div>
+    <div class="check-list">
+      <div class="check-item done">
+        <div class="check-num">✓</div>
+        <div class="check-text">
+          <strong>Games API</strong>
+          <p>https://games.roblox.com/v1/games?universeIds=6786784563 — Returns title, description, creator, visits, favorites, playing</p>
+        </div>
+      </div>
+      <div class="check-item done">
+        <div class="check-num">✓</div>
+        <div class="check-text">
+          <strong>Votes API</strong>
+          <p>https://games.roblox.com/v1/games/votes?universeIds=6786784563 — Returns upvotes/downvotes</p>
+        </div>
+      </div>
+      <div class="check-item done">
+        <div class="check-num">✓</div>
+        <div class="check-text">
+          <strong>Badges API</strong>
+          <p>Checked — returned empty for this game</p>
+        </div>
+      </div>
+      <div class="check-item hold">
+        <div class="check-num">✗</div>
+        <div class="check-text">
+          <strong>Social Links API</strong>
+          <p>https://games.roblox.com/v1/games/122720857080780/social-links/list — Returned 401 unauthorized</p>
+        </div>
+        <span class="check-badge warn">No public result</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel section">
+    <div class="section-head">
+      <h2>Corrections and updates</h2>
+      <p>If you find outdated or incorrect information, please reach out. Our source data is dated — Roblox API data can change frequently.</p>
+    </div>
+    <p style="font-size: 13px; color: var(--muted);">We re-check official API sources regularly. This site does not have automatic updates — content is updated when manual checks confirm a change.</p>
+    <p style="font-size: 13px; color: var(--quiet); margin-top: 10px;">Last full API check: {SITE.metricsDate}</p>
+  </div>
+</Base>

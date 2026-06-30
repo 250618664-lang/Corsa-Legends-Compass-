@@ -1,0 +1,19 @@
+dist/
+.astro/
+node_modules/
+.env
+.env.local
+.env.*.local
+.DS_Store
+.vscode/settings.json
+
+/research/
+/runs/
+/data/
+/.agents/
+
+/*.md
+!/README.md
+
+# Site-specific planning files (private)
+*.csv

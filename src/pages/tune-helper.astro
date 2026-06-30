@@ -1,0 +1,160 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+---
+
+<Base title="Tune Helper" description="Corsa Legends tune categories confirmed from official Roblox description — engine swaps, suspension, tires, and more. No exact values.">
+  <div class="hero-grid">
+    <div>
+      <div class="panel hero">
+        <span class="eyebrow"><span class="dot warn"></span> Tune Helper</span>
+        <h1>Tune Category<br/>Checklist</h1>
+        <p class="lead">Shows which tuning categories are officially described — and which specific values are still unverified.</p>
+      </div>
+
+      <div class="panel section" style="margin-top: 16px;">
+        <div class="answer-strip" style="margin: 0;">
+          <div>
+            <strong>Feature categories: confirmed — Exact values: not verified yet</strong>
+            <span>Only publish what the official Roblox description supports. No best car / best engine / exact tune.</span>
+          </div>
+        </div>
+
+        <h2 style="margin: 20px 0 10px; font-size: 16px;">Official tuning categories</h2>
+        <p style="font-size: 13px; margin-bottom: 14px; color: var(--quiet);">Source: Roblox API description snapshot {SITE.metricsDate}. These categories are officially mentioned — individual values are held.</p>
+
+        <div class="check-list">
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Engine Swaps</strong>
+              <p>Explicitly mentioned in official Roblox description</p>
+            </div>
+            <span class="check-badge good">Confirmed</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Suspension Setups</strong>
+              <p>Explicitly mentioned in official Roblox description</p>
+            </div>
+            <span class="check-badge good">Confirmed</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Tire Choices</strong>
+              <p>Explicitly mentioned in official Roblox description</p>
+            </div>
+            <span class="check-badge good">Confirmed</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Advanced Tuning</strong>
+              <p>Explicitly mentioned in official Roblox description</p>
+            </div>
+            <span class="check-badge good">Confirmed</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Performance Upgrades</strong>
+              <p>Explicitly mentioned in official Roblox description</p>
+            </div>
+            <span class="check-badge good">Confirmed</span>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Paint / Interior / Rims / Tint</strong>
+              <p>Explicitly mentioned in official Roblox description</p>
+            </div>
+            <span class="check-badge good">Confirmed</span>
+          </div>
+        </div>
+
+        <h2 style="margin: 24px 0 10px; font-size: 16px;">What needs verification</h2>
+        <p style="font-size: 13px; margin-bottom: 14px; color: var(--quiet);">These appear in searches but have no official confirmation yet. Check in game first.</p>
+
+        <div class="check-list">
+          <div class="check-item hold">
+            <div class="check-num">?</div>
+            <div class="check-text">
+              <strong>Exact tune values</strong>
+              <p>No official source provides specific tuning numbers yet</p>
+            </div>
+            <span class="check-badge warn">Not confirmed</span>
+          </div>
+          <div class="check-item hold">
+            <div class="check-num">?</div>
+            <div class="check-text">
+              <strong>Best car / best engine</strong>
+              <p>No official ranking or tier list exists</p>
+            </div>
+            <span class="check-badge warn">Not confirmed</span>
+          </div>
+          <div class="check-item hold">
+            <div class="check-num">?</div>
+            <div class="check-text">
+              <strong>Supra tune</strong>
+              <p>Cannot verify any specific Supra tuning values</p>
+            </div>
+            <span class="check-badge warn">Not confirmed</span>
+          </div>
+          <div class="check-item hold">
+            <div class="check-num">?</div>
+            <div class="check-text">
+              <strong>Car values / tier list</strong>
+              <p>No official car value or rarity data available</p>
+            </div>
+            <span class="check-badge warn">Not confirmed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="panel side">
+        <h2>Scope from official description</h2>
+        <p style="font-size: 13px; color: var(--muted); margin-bottom: 12px;">Roblox API description confirms:</p>
+        <div class="check-list">
+          <div class="check-item done">
+            <div class="check-num" style="font-size:11px;">80+</div>
+            <div class="check-text">
+              <strong>Cars and trims</strong>
+              <p>Over 80 cars and trims</p>
+            </div>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Live races</strong>
+              <p>Official feature from description</p>
+            </div>
+          </div>
+          <div class="check-item done">
+            <div class="check-num">✓</div>
+            <div class="check-text">
+              <strong>Cities, highways, roads</strong>
+              <p>Track environments mentioned</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel side" style="margin-top: 14px;">
+        <h2>About this page</h2>
+        <p style="font-size: 12px; color: var(--muted); line-height: 1.5;">We only list categories officially described by Roblox. Exact tuning numbers, car rankings, and best-build claims are not published because no verified source confirms them.</p>
+        <p style="font-size: 12px; color: var(--quiet); margin-top: 8px;">Last checked: {SITE.metricsDate}</p>
+        <p style="font-size: 12px; color: var(--quiet);"><a href="/sources/" style="color: var(--accent);">→ Source trust info</a></p>
+      </div>
+
+      <div class="panel side" style="margin-top: 14px;">
+        <h2>Updates affect tuning</h2>
+        <p style="font-size: 12px; color: var(--muted); margin-bottom: 8px;">New cars or races added in updates can change which tunes matter. Check the update tracker.</p>
+        <a href="/updates/" style="color: var(--accent); font-size: 13px;">→ Update Tracker</a>
+      </div>
+    </aside>
+  </div>
+</Base>

@@ -1,0 +1,182 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../data/site';
+import { METRICS } from '../data/claims';
+---
+
+<Base title="">
+  <div class="hero-grid">
+    <div class="panel hero">
+      <span class="eyebrow"><span class="dot"></span> {SITE.officialTitle}</span>
+      <h1>{SITE.gameName}<br/>Help Hub</h1>
+      <p class="lead">Check official code status, see which tune categories are confirmed, and track game updates — from safe sources only.</p>
+
+      <div class="task-grid">
+        <a class="task-card" href="/codes/">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Code Status</h3>
+          <p>Check what code is officially listed and what the next reward target is.</p>
+        </a>
+        <a class="task-card" href="/tune-helper/">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+          </div>
+          <h3>Tune Helper</h3>
+          <p>See which tuning categories are officially confirmed and which are still unverified.</p>
+        </a>
+        <a class="task-card" href="/updates/">
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-.18-5.49"/></svg>
+          </div>
+          <h3>Update Tracker</h3>
+          <p>Track the latest officially confirmed changes, cars, and race additions.</p>
+        </a>
+      </div>
+    </div>
+
+    <aside class="panel side">
+      <h2>Game Snapshot</h2>
+
+      <div class="metric-row" style="margin: 0;">
+        <div class="metric-item">
+          <strong>{METRICS.visits}</strong>
+          <span>Total Visits</span>
+        </div>
+        <div class="metric-item">
+          <strong>{METRICS.favorites}</strong>
+          <span>Favorites</span>
+        </div>
+        <div class="metric-item">
+          <strong>{METRICS.playing}</strong>
+          <span>Playing</span>
+        </div>
+      </div>
+      <p style="font-size: 11px; color: var(--quiet); margin-top: 8px;">API snapshot {METRICS.date} · may have changed</p>
+
+      <div style="height: 1px; background: var(--line); margin: 4px 0;"></div>
+
+      <div class="status-grid" style="margin-top: 14px;">
+        <div class="status-card good">
+          <h3>Code Status</h3>
+          <p>Official code <code style="font-size:12px;color:var(--accent);">75K</code> confirmed from Roblox description</p>
+        </div>
+        <div class="status-card warn">
+          <h3>Tuning Values</h3>
+          <p>Categories confirmed — exact values not verified yet</p>
+        </div>
+        <div class="status-card warn">
+          <h3>Official Discord</h3>
+          <p>Cannot be confirmed from public API</p>
+        </div>
+        <div class="status-card good">
+          <h3>Alpha Status</h3>
+          <p>Game is officially in Alpha — expect bugs</p>
+        </div>
+      </div>
+
+      <div style="height: 1px; background: var(--line); margin: 4px 0;"></div>
+
+      <div class="mini">
+        <h3>Quick Links</h3>
+        <p><a href="/wiki-discord/" style="color: var(--accent);">→ Wiki &amp; Discord status</a></p>
+        <p><a href="/sources/" style="color: var(--accent);">→ Source trust info</a></p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="panel section">
+    <div class="section-head">
+      <div>
+        <h2>What can you check here?</h2>
+        <p>Each card is a real page with source-backed information.</p>
+      </div>
+      <span class="pill">7 pages</span>
+    </div>
+
+    <div class="link-list">
+      <a class="link-item" href="/codes/">
+        <div class="link-icon">🔓</div>
+        <div>
+          <strong>/codes/ — Codes Status</strong>
+          <p>Official code from Roblox description. New code goal: 90,000 likes.</p>
+        </div>
+        <span class="link-badge good">Official</span>
+      </a>
+      <a class="link-item" href="/tune-helper/">
+        <div class="link-icon">⚙️</div>
+        <div>
+          <strong>/tune-helper/ — Tune Category Checklist</strong>
+          <p>Confirmed tuning categories: engine swaps, suspension, tires, advanced tuning.</p>
+        </div>
+        <span class="link-badge warn">Limited</span>
+      </a>
+      <a class="link-item" href="/updates/">
+        <div class="link-icon">📡</div>
+        <div>
+          <strong>/updates/ — Update Tracker</strong>
+          <p>Alpha status, 2 cars + new race confirmed in official title.</p>
+        </div>
+        <span class="link-badge good">Official</span>
+      </a>
+      <a class="link-item" href="/wiki-discord/">
+        <div class="link-icon">🔗</div>
+        <div>
+          <strong>/wiki-discord/ — Wiki &amp; Discord Status</strong>
+          <p>Fandom wiki exists. Official Discord cannot be confirmed from public API.</p>
+        </div>
+        <span class="link-badge warn">Check first</span>
+      </a>
+      <a class="link-item" href="/sources/">
+        <div class="link-icon">📋</div>
+        <div>
+          <strong>/sources/ — Source Trust Cards</strong>
+          <p>Explains what comes from Roblox API vs. community leads.</p>
+        </div>
+        <span class="link-badge">Reference</span>
+      </a>
+      <a class="link-item" href="/about/">
+        <div class="link-icon">ℹ️</div>
+        <div>
+          <strong>/about/ — About &amp; Disclaimer</strong>
+          <p>Unofficial helper, content boundaries, and contact for corrections.</p>
+        </div>
+        <span class="link-badge">Policy</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="panel section">
+    <div class="section-head">
+      <div>
+        <h2>What we do NOT publish</h2>
+        <p>These are unverified or not publicly confirmable — do not trust third-party lists claiming them.</p>
+      </div>
+    </div>
+    <div class="can-cannot">
+      <div class="cannot-card">
+        <h3>✗ Cannot trust yet</h3>
+        <ul>
+          <li>Best car / best engine rankings</li>
+          <li>Exact tune values or Supra tune</li>
+          <li>Active codes beyond official description</li>
+          <li>Car values or tier list</li>
+          <li>Official Discord link</li>
+          <li>Race routes or money farm methods</li>
+        </ul>
+      </div>
+      <div class="can-card">
+        <h3>✓ Safe to use now</h3>
+        <ul>
+          <li>Official code <strong>75K</strong> from Roblox description</li>
+          <li>Tuning feature categories (engine swaps, suspension, tires)</li>
+          <li>Alpha status and official title</li>
+          <li>Creator group Cogito</li>
+          <li>80+ cars/trims scope</li>
+          <li>API snapshot metrics (dated)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Base>
