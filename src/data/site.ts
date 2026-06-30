@@ -5,13 +5,17 @@
 export const SITE = {
   title: 'Corsa Legends Tune & Code Checker',
   description: 'Unofficial Corsa Legends helper for Roblox. Check official code status, tune categories, and update tracker — safe sources only.',
+  mode: 'fast-test',
+  theme: 'racing-tech',
+  ads: false,
+  analytics: false,
   gameName: 'Corsa Legends',
   platform: 'Roblox',
   creator: 'Cogito',
   gameId: '122720857080780',
   universeId: '6786784563',
   alpha: true,
-  officialTitle: '[🏎️2 CARS + NEW RACE] Corsa Legends [ALPHA]',
+  officialTitle: '[2 CARS + NEW RACE] Corsa Legends [ALPHA]',
   // API snapshot date for volatile metrics
   metricsDate: '2026-06-29',
   // Official code from Roblox game description
