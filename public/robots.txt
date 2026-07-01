@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://corsa-legends-compass.vercel.app/sitemap-index.xml
